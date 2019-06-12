@@ -1,0 +1,43 @@
+<div id = "divMetodo">
+	<ul>
+		<li><b>Fase 1: Especificación de objetivo de integración</b></li>
+			<ul>
+			<li><u><a class="fase" name="./integration/analysis/listar/"><u>Listar procesos y variantes</u></a></u></li>
+			<li>Cargar Objetivo de Integración:<input type="file" id="txtFileObjetivo" /></li>
+			<li>Cargar Modelo de Contexto:<input type="file" id="txtFileContexto" /></li>
+			</ul>	
+	<hr/>
+		<li><b>Fase 2: Búsqueda y recuperación de procesos</b></li>
+			<ul>
+			<li><div id="selectMR"></div><font size="2"></font></li>
+			<li><u><a  class="fase" name="./integration/analysis/similitud/index.html" id="f2">Buscar y recuperar variantes</a></u></li>
+			</ul>
+	<hr/>
+			
+	<li><b>Fase 3: Integración y Regresión</b></li>
+			<ul>
+				<li>
+					<a href="initIntegration.php">Realizar integración</a>
+				</li>
+				<li>
+					<a href="reportRegretion.php">Reporte de Regresión</a>
+				</li>
+			</ul>
+	<hr/>
+			
+			<li><b>Fase 4: Propagación de cambios</b></li>
+			<ul>
+				<li>
+					<a href="initPropagration.php">Iniciar Propagación</a>
+				</li>
+				<li>
+					<a href="executeIntegration.php">Ejecución de integración</a>
+				</li>
+				<li>
+					<a href="finalReport.php">Reporte de ejecución</a>
+				</li>
+			</ul>
+			<script src="scripts/accionMetodo.js"></script>
+		</div> <!-- Div Content -->
+<script src="scripts/inicioMetodo.js"></script>
+    

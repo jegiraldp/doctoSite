@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Process id="rv01_rm04" name="curriculo" description="Modelo de Referencia">
+	<!--Extended attributes-->
+	<ExtendedAttributes>
+		<ExtendedAttribute id="ea01">
+			<ProcessType>reference</ProcessType>
+		</ExtendedAttribute>
+		<ExtendedAttribute id="ea02">
+			<name>image</name>
+			<value>rv01_rm04_curriculo.png</value>
+		</ExtendedAttribute>
+		<ExtendedAttribute id="ea03">
+			<name>file</name>
+			<value>rv01_rm04_curriculo.xml</value>
+		</ExtendedAttribute>
+		<ExtendedAttribute id="ea04">
+			<name>path</name>
+			<value>do00</value>
+		</ExtendedAttribute>
+	</ExtendedAttributes>
+	<!--Extended attributes-->
+	<Participants>
+		<participant id="p01_rv01_rm04" name="comite_facultad" processRef="#rv01_rm04">
+			<ExtendedAttributes/>
+		</participant>
+		<participant id="p02_rv01_rm04" name="comite_curriculo" processRef="#rv01_rm04">
+			<ExtendedAttributes/>
+		</participant>
+		<participant id="p03_rv01_rm04" name="comite_autoevaluacion" processRef="#rv01_rm04">
+			<ExtendedAttributes/>
+		</participant>
+	</Participants>
+	<!--participants-->
+	<WorkflowProcess id="#rm_04">
+		<!--Activities-->
+		<!-- status 0:off (default)- 1:on - 2:done-->
+		<Activities>
+			<!-- type 0:normal (default)- 66:inicio - 99:fin - 1:excl - 2:join - 3::parale-->
+			<Activity id="a01_rv01_rm04" name="inicio" participant="#p01_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a01_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="66"/>
+				<!-- 66:inicio-->
+				<Description>Inicio</Description>
+			</Activity>
+			<Activity id="a02_rv01_rm04" name="definirFuentes" participant="#p01_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a02_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 66:inicio-->
+				<Description>Definir fuentes de informacion</Description>
+			</Activity>
+			<Activity id="a03_rv01_rm04" name="disenarEstrategias" participant="#p01_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a03_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 66:inicio-->
+				<Description>Disenar estrategias de actualizacion</Description>
+			</Activity>
+			<Activity id="a04_rv01_rm04" name="construirDocumento" participant="#p03_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a04_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 66:inicio-->
+				<Description>Construir documento de tendencias</Description>
+			</Activity>
+			<Activity id="a05_rv01_rm04" name="validarDocumentos" participant="#p03_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a05_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 66:inicio-->
+				<Description>Validar documentos</Description>
+			</Activity>
+			<Activity id="a06_rv01_rm04" name="criterios" participant="#p03_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a06_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="1"/>
+				<!-- 66:inicio-->
+				<Description>Criterios Ok</Description>
+			</Activity>
+			<Activity id="a07_rv01_rm04" name="disenar" participant="#p02_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a07_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 66:inicio-->
+				<Description>Disenar curriculo</Description>
+			</Activity>
+			<Activity id="a08_rv01_rm04" name="aprobar" participant="#p01_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a08_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 66:inicio-->
+				<Description>Aprobar curriculo</Description>
+			</Activity>
+
+			<Activity id="a09_rv01_rm04" name="disenarAlertas" participant="#p03_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a09_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 66:inicio-->
+				<Description>Disenar Alertas de actualizacion</Description>
+			</Activity>
+
+
+			
+			<Activity id="a10_rv01_rm04" name="inicio" participant="#p03_rv01_rm04" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a10_rv01_rm04">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="99"/>
+				<!-- 66:inicio-->
+				<Description>Fin</Description>
+			</Activity>
+		</Activities>
+		<!--Activities-->
+		<!--Transitions-->
+		<Transitions>
+			<Transition id="t01_rv01_rm04" From="#a01_rv01_rm04" To="#a02_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+						<Transition id="t02_rv01_rm04" From="#a02_rv01_rm04" To="#a03_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t03_rv01_rm04" From="#a03_rv01_rm04" To="#a04_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t04_rv01_rm04" From="#a04_rv01_rm04" To="#a05_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>			
+			<Transition id="t05_rv01_rm04" From="#a05_rv01_rm04" To="#a06_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t06_rv01_rm04" From="#a06_rv01_rm04" To="#a04_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>50</Expression>
+				</Condition>
+				<Description>no</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t07_rv01_rm04" From="#a06_rv01_rm04" To="#a07_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>50</Expression>
+				</Condition>
+				<Description>si</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t08_rv01_rm04" From="#a07_rv01_rm04" To="#a08_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t09_rv01_rm04" From="#a08_rv01_rm04" To="#a09_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t10_rv01_rm04" From="#a09_rv01_rm04" To="#a10_rv01_rm04">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+
+		</Transitions>
+	</WorkflowProcess>
+</Process>

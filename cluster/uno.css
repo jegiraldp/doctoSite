@@ -1,0 +1,9 @@
+#tablaCluster tr td{
+border: solid 1px gray;
+text-align: justify;
+}
+
+#tablaCluster{
+cellspacing:0;
+}
+

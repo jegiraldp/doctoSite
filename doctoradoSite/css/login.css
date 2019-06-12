@@ -1,0 +1,49 @@
+input#usr:focus, input#usr:hover,input#clv:focus, input#clv:hover{
+background-color: lightyellow; 
+border: solid 1px #707070;
+box-shadow: 0 0 5px 1px #969696
+}
+
+div#divEscondido{
+border: 1px red;
+background-color: #fef1ec; 
+width: 500px;
+height:28px;
+display: none;
+font-weight:bold;
+vertical-align: middle;
+ border-right-style: solid;
+  border-left-style: solid;
+}
+
+input#usr{
+    height:30px; 
+    width: 250px; 
+	font-size:16px;
+	background:url("../img/frmuser.png") no-repeat 100% 50%;
+}
+
+input#clv{
+ height:30px; 
+    width: 250px; 
+	font-size:16px;
+ 	background:url("../img/frmkey.png") no-repeat 100% 50%;
+}
+
+label{
+font-size:18px;
+}
+
+
+#boton{
+background-color:#263690;
+color:white;
+height:30px; 
+width: 100px;
+font-size:16px;
+}
+
+#boton:hover{
+background-color:#5766B7;
+border: solid 1px black;
+}

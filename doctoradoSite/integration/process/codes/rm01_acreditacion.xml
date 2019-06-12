@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Process id="rm01" name="acreditacion" description="Modelo de Referencia">
+	<!--Extended attributes-->
+	<ExtendedAttributes>
+		<ExtendedAttribute id="ea01">
+			<ProcessType>reference</ProcessType>
+		</ExtendedAttribute>
+		<ExtendedAttribute id="ea02">
+			<name>image</name>
+			<value>rm03_cafe.png</value>
+		</ExtendedAttribute>
+		<ExtendedAttribute id="ea03">
+			<name>file</name>
+			<value>rm01_acreditacion.xml</value>
+		</ExtendedAttribute>
+		<ExtendedAttribute id="ea04">
+			<name>path</name>
+			<value>do00</value>
+		</ExtendedAttribute>
+	</ExtendedAttributes>
+	<!--Extended attributes-->
+	<Participants>
+		<participant id="p01_rm01" name="comite_facultad" processRef="#rm01">
+			<ExtendedAttributes/>
+		</participant>
+		<participant id="p02_rm01" name="comite_institucional" processRef="#rm01">
+			<ExtendedAttributes/>
+		</participant>
+		<participant id="p03_rm01" name="comite_programa" processRef="#rm01">
+			<ExtendedAttributes/>
+		</participant>
+	</Participants>
+	<!--participants-->
+	<WorkflowProcess id="#rm_01">
+		<!--Activities-->
+		<!-- status 0:off (default)- 1:on - 2:done-->
+		<Activities>
+			<!-- type 0:normal (default)- 66:inicio - 99:fin - 1:excl - 2:join - 3::parale-->
+			<Activity id="a01_rm01" name="inicio" participant="#p01_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a01_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="66"/>
+				<!-- 66:inicio-->
+				<Description>Inicio</Description>
+			</Activity>
+			<Activity id="a02_rm01" name="realizarSensibilizacion" participant="#p01_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a02_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 0:normal-->
+				<Description>Realizar Sensibilizacion</Description>
+			</Activity>
+			<Activity id="a03_rm01" name="iniciarProcesoSoftware" participant="#p02_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a03_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 0:normal-->
+				<Description>Iniciar proceso en software</Description>
+			</Activity>
+			<Activity id="a04_rm01" name="primeraVez" participant="#p02_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a04_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="1"/>
+				<!-- 1:ecl-->
+				<Description>Primera Vez</Description>
+			</Activity>
+			<Activity id="a05_rm01" name="asignarClave" participant="#p02_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a05_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 0:normal-->
+				<Description>Asignar Clave</Description>
+			</Activity>
+			<Activity id="a06_rm01" name="ponderar" participant="#p03_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a06_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 0:normal-->
+				<Description>Ponderar Indicadores</Description>
+			</Activity>
+			<Activity id="a07_rm01" name="encuestar" participant="#p03_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a07_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 0:normal-->
+				<Description>Aplicar encuestas</Description>
+			</Activity>
+			<Activity id="a08_rm01" name="cerrarSoftware" participant="#p02_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a08_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 0:normal-->
+				<Description>Cerrar proceso en software</Description>
+			</Activity>
+			<Activity id="a09_rm01" name="analizar" participant="#p03_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a09_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 0:normal-->
+				<Description>Análisis de resultados</Description>
+			</Activity>
+			<Activity id="a10_rm01" name="puntaje" participant="#p03_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a10_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="1"/>
+				<!-- 1_excl-->
+				<Description>Puntaje may 80</Description>
+			</Activity>
+			<Activity id="a11_rm01" name="autorizar" participant="#p02_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a11_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 1_excl-->
+				<Description>Autorizar acreditacion alta calidad</Description>
+			</Activity>
+			<Activity id="a12_rm01" name="autorizar" participant="#p03_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a12_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="0"/>
+				<!-- 1_excl-->
+				<Description>Autorizar acreditacion alta calidad</Description>
+			</Activity>
+			<Activity id="a13_rm01" name="inicio" participant="#p03_rm01" status="0">
+				<ExtendedAttributes>
+					<ExtendedAttribute id="rp001_a13_rm01">
+						<!-- rp: rule operacional  ro: rule organizacional -->
+						<name>rule</name>
+						<value>una regla</value>
+					</ExtendedAttribute>
+				</ExtendedAttributes>
+				<Route Type="99"/>
+				<!-- 66:inicio-->
+				<Description>Fin</Description>
+			</Activity>
+
+		</Activities>
+		<!--Activities-->
+		<!--Transitions-->
+		<Transitions>
+			<Transition id="t01_rm01" From="#a01_rm01" To="#a02_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t02_rm01" From="#a02_rm01" To="#a03_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t03_rm01" From="#a03_rm01" To="#a04_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t04_rm01" From="#a04_rm01" To="#a06_rm01">
+				<Condition type="CONDITION">
+					<Expression>50</Expression>
+				</Condition>
+				<Description>no</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t05_rm01" From="#a04_rm01" To="#a05_rm01">
+				<Condition type="CONDITION">
+					<Expression>50</Expression>
+				</Condition>
+				<Description>si</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t06_rm01" From="#a05_rm01" To="#a06_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t07_rm01" From="#a06_rm01" To="#a07_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t08_rm01" From="#a07_rm01" To="#a08_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t09_rm01" From="#a08_rm01" To="#a09_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t10_rm01" From="#a09_rm01" To="#a10_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t11_rm01" From="#a10_rm01" To="#a11_rm01">
+				<Condition type="CONDITION">
+					<Expression>50</Expression>
+				</Condition>
+				<Description>si</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t12_rm01" From="#a10_rm01" To="#a12_rm01">
+				<Condition type="CONDITION">
+					<Expression>50</Expression>
+				</Condition>
+				<Description>no</Description>
+				<ExtendedAttributes/>
+			</Transition>
+			<Transition id="t13_rm01" From="#a12_rm01" To="#a13_rm01">
+				<Condition type="CONDITION">
+					<Expression>100</Expression>
+				</Condition>
+				<Description>--</Description>
+				<ExtendedAttributes/>
+			</Transition>
+		</Transitions>
+	</WorkflowProcess>
+</Process>
